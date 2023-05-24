@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* aplicando css */
+#card{
+  height: 350px;
+  width: 350px;
+}
+#card img{
+  height: 350px;
+  width: 100%;
+}
+#logo img{
+  height: 70px;
+  border-radius: 30px 6px ;
+}
+#logo img:hover {
+  box-shadow: 3px 3px 10px rgb(79, 61, 17);
+}
+
+#buscar {
+  outline: none;
+}
+
+#categorias li:hover {
+  box-shadow: 1px 1px 3px rgba(56, 56, 56, 0.88);
+}
+
+#navbarSupportedContent ul #nombreUsuario h1 {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 30px !important;
+  font-family: "Concert One", cursive !important;
+}
+#navbarSupportedContent ul li a:hover {
+  color: white;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.723) 0%, rgba(0, 241, 255, 0) 4%);
+  padding-bottom: 1px solid gray;
+  scale: 1.1;
+}
+
+.barraBusqueda{
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid rgba(125, 107, 60, 0.945);
+  padding: 2px 12px; 
+  outline: none
+}
