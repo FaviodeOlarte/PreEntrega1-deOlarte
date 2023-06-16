@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams,NavLink, useNavigate } from "react-router-dom";
 import { getCategorias, getItems } from "../../services";
 import { ItemList } from "../../components";
-import { categorias } from "../../temp/data";
+import {CategoriasLateral} from "../../components/CategoriasLateral"
 
 const ItemListContainer = (greeting) => {
   // --------------
@@ -27,54 +27,36 @@ const ItemListContainer = (greeting) => {
   return (
     <>
       <>
-      
-      <nav>
-        <ul>
-          {categorias.map((categorias)=>(
+       <div className="container m-0">
+            <div className="row">
 
-          <li>
-            <NavLink to={`/category/${categorias.id}`}>{categorias.name}</NavLink>
-          </li>
-          ))}
-        </ul>
-      </nav>
-        <div className="articulos col-12 col-md-9 col-xl-10 mt-sm-4 mt-3 mb-3">
-          <div
-            id="contenedorProductos"
-            className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"
-          >
-            <ItemList items={items.map((item)=>(
-              {
-                ...item,
-                linkCard:() => navigate(`/item-detalle/${item.id}`)
+              <div className="col-2 mt-0 text-center bg-dark-subtle p-3 ">
+                <CategoriasLateral />
+              </div>
+              
+                <div className="col-10  mt-4 mb-3 ">
+                    <div
+                      id="contenedorProductos"
+                      className="row row-cols-3  gx-auto"
+                    >
+                      
+                      <ItemList items={items.map((item)=>(
+                        {
+                          ...item,
+                          linkCard:() => navigate(`/item-detalle/${item.id}`)
 
-            }))} />
-          </div>
-        </div>
+                      }))}  />
+
+                    </div>
+                </div>
+            </div>
+        
+       </div>
+
+        
+
       </>
     </>
-    // <div class="articulos col-12 col-md-9 col-xl-10 mt-sm-4 mt-3 mb-3">
-    //   <div
-    //     id="contenedorProductos"
-    //     className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4"
-    //   >
-    //     <a className="text-decoration-none text-dark h-100 w-100">
-    //       <div className="card h-100" id="card">
-    //         <img src={greeting.imgCard} className="card-img-top" />
-    //         <div className="card-body h-100 d-flex flex-column">
-    //           <h1 className="card-title fs-4">{greeting.nombre}</h1>
-    //           <p className="card-text">{greeting.descripcion}</p>
-    //           <div className="d-flex  flex-fill justify-content-between align-items-end">
-    //             <button className="agregarAlCarritoCard">
-    //               Agregar al carrito
-    //             </button>
-    //             <b>$ {greeting.precio}</b>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </a>
-    //   </div>
-    // </div>
   );
 };
 

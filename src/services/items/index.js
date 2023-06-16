@@ -3,7 +3,7 @@ import { productos } from "../../temp/data";
 const getItems = async (catId) => {
   return new Promise((resolve, reject) => {
     resolve(
-      catId === "0"
+      catId === "0" || !catId
         ? productos
         : productos.filter((prod) => prod.catSexo === catId)
     );

@@ -37,8 +37,9 @@
   }
 }
 
+.navSuperior{box-shadow: 0px -9px 14px 15px rgba(40, 40, 40, 0.8);
+}
 
-/* aplicando css */
 #card{
   height: 350px;
   width: 350px;
@@ -84,3 +85,108 @@
   padding: 2px 12px; 
   outline: none
 }
+
+
+
+/* --------------- Item detail ---------- */
+
+
+
+#contePrincipal{
+    width: 100vw;
+    height: 90vh;}
+
+
+            
+#imgPrinc img{
+        height: 490px ;
+        width: 520px ;
+        border-radius: 50px 15px !important;
+        box-shadow:5px 5px 15px gray;
+        
+    }
+            
+    
+    #conteDetalles{
+        font-family: 'Roboto', sans-serif !important;
+    }
+    #conteDetalles h1{
+            text-shadow: 1px  0   2px rgb(100, 100, 100) !important; 
+        }
+        #conteDetalles h2{
+            font-size: 27px !important;
+            color: rgb(9, 9, 9) !important;
+            text-shadow: 1px  1px   4px rgb(58, 58, 58) !important;
+        }
+        #conteDetalles p{
+            font-size: 15px !important;  
+        }
+        .comprar{
+            margin: 15px 10px;
+            width: 95%;
+            height: 40px;
+            border-radius: 8px;
+            border: 0px solid;
+            background-color: rgb(81, 80, 80);
+            color: aliceblue;
+            text-shadow: 1px  1px   15px rgb(72, 72, 72);
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            letter-spacing: 3px;
+            text-shadow: 1px 1px 15px black,1px 1px 1px black;
+            &:hover{
+                background-color: rgb(54, 54, 54);}
+        }
+        .agregarAlCarrito{
+            margin: 15px 10px;
+            width: 95%;
+            height: 40px;
+            border-radius: 8px;
+            border: 0px solid;
+            background-color: rgb(135, 135, 135);
+            color: aliceblue;
+            text-shadow: 1px  1px   15px rgb(72, 72, 72);
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 15px black,1px 1px 1px black;
+            &:hover{
+                background-color: rgb(43, 43, 43);
+            }
+        }
+        .masDetalles{
+            list-style: none;
+            li{
+                padding: 10px 10px 10px;
+                &:hover {
+                    text-shadow: 1px 1px 2px rgb(79, 79, 79);
+                } 
+            
+            }
+        }
+    
+    
+  /* ------------------ */
+.main-productos{
+font-size: 1rem !important}
+
+#cat-producto{
+  font-size: 13px;
+  background-color: rgb(68, 67, 67) !important;}
+#cat-producto div button{
+  height: 30px !important;
+  font-size: 13px !important;
+  border: none !important;}
+#cat-producto div button a h1{
+  font-size: 13px !important;
+  }
+  .hover:hover{
+    color: rgb(255,204,16) !important;
+}
+.hoverActivo{
+    color: rgb(255,204,16) !important;
+}
+
+          /* ------------------------           */
+
+      

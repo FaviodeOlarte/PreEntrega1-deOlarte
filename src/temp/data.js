@@ -9,7 +9,7 @@ export const categorias = [
 
 export const productos = [
   {
-    id: 1,
+    id: "1",
     catSexo: "1",
     catGral: "Prendas superiores",
     prenda: "Camisetas y henleys",
@@ -26,7 +26,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 2,
+    id: "2",
     catSexo: "1",
     catGral: "Prendas superiores",
     prenda: "Canguros",
@@ -43,7 +43,7 @@ export const productos = [
     prodcutoLink: "../pages/pag-capera-detalle.html",
   },
   {
-    id: 3,
+    id: "3",
     catSexo: "1",
     catGral: "Prendas superiores",
     prenda: "Canguros",
@@ -60,7 +60,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 4,
+    id: "4",
     catSexo: "1",
     catGral: "Prendas inferiores",
     prenda: "",
@@ -77,7 +77,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 5,
+    id: "5",
     catSexo: "1",
     catGral: "Prendas inferiores",
     prenda: "",
@@ -94,7 +94,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 6,
+    id: "6",
     catSexo: "1",
     catGral: "Prendas superiores",
     prenda: "Canguros",
@@ -111,7 +111,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 7,
+    id: "7",
     catSexo: "2",
     catGral: "Prendas superiores",
     prenda: "Canguros",
@@ -128,7 +128,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 8,
+    id: "8",
     catSexo: "2",
     catGral: "Prendas superiores",
     prenda: "Canguros",
@@ -146,7 +146,7 @@ export const productos = [
     prodcutoLink: "../pages/pag-detalle-2000001.html",
   },
   {
-    id: 9,
+    id: "9",
     catSexo: "2",
     catGral: "Prendas superiores",
     prenda: "Camisetas y henleys",
@@ -164,7 +164,7 @@ export const productos = [
     prodcutoLink: "../pages/pag-detalle-2000002.html",
   },
   {
-    id: 10,
+    id: "10",
     catSexo: "2",
     catGral: ["Prendas superiores", " Prendas inferiores"],
     prenda: "Suéteres",
@@ -181,7 +181,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 11,
+    id: "11",
     catSexo: "2",
     catGral: "Prendas inferiores",
     prenda: "",
@@ -198,7 +198,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 12,
+    id: "12",
     catSexo: "2",
     catGral: "Prendas inferiores",
     prenda: "",
@@ -215,7 +215,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 13,
+    id: "13",
     catSexo: "3",
     catGral: "Prendas inferiores",
     prenda: "",
@@ -232,7 +232,7 @@ export const productos = [
     prodcutoLink: "../pages/pag-detalle-3000001.html",
   },
   {
-    id: 14,
+    id: "14",
     catSexo: "3",
     catGral: "Prendas inferiores",
     prenda: "",
@@ -249,7 +249,7 @@ export const productos = [
     prodcutoLink: "../pages/pag-detalle-3000002.html",
   },
   {
-    id: 15,
+    id: "15",
     catSexo: "3",
     catGral: "Prendas inferiores",
     prenda: "",
@@ -266,7 +266,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 16,
+    id: "16",
     catSexo: "3",
     catGral: "Prendas superiores",
     prenda: "Camisetas y henleys",
@@ -283,7 +283,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 17,
+    id: "17",
     catSexo: "3",
     catGral: "Prendas superiores",
     prenda: "Camisetas y henleys",
@@ -300,7 +300,7 @@ export const productos = [
     prodcutoLink: "",
   },
   {
-    id: 18,
+    id: "18",
     catSexo: "3",
     catGral: "Prendas superiores",
     prenda: "Camisetas y henleys",

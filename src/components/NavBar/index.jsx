@@ -8,7 +8,7 @@ const NavBar = ({logo}) => {
 
   return (
     <header class="container-fluid p-0">
-      <nav class="row navbar navbar-expand-md bg-warning bg-gradient m-0 w-100">
+      <nav class="row navbar navbar-expand-md bg-warning bg-gradient m-0 w-100 navSuperior">
         <div className="container-fluid p-0">
           <div className="col-2 col-sm-2 ps-lg-2 logo">
             <a

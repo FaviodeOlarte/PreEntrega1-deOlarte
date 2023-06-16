@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+
 
 const Item = ({ id, nombre, descripcion, precio, imgCard,linkCard }) => {
   return (
