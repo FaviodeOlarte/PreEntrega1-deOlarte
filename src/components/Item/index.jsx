@@ -5,7 +5,7 @@ const Item = ({ id, nombre, descripcion, precio, imgCard,linkCard }) => {
     <div className="col" key={id}>
       <a
         className="text-decoration-none text-dark h-100 w-100"
-         onClick={linkCard}
+        onClick={linkCard}
       >
         <div className="card h-100" id="card">
           <img src={imgCard} className="card-img-top" />
