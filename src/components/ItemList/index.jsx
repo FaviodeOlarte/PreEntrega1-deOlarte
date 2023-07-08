@@ -1,16 +1,20 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Item } from "../Item";
 
-const ItemList = ({ items }) => {
-  return items.map(({ id, nombre, descripcion, precio, imgCard,linkCard }) => (
-    <Item
-      id={id}
-      nombre={nombre}
-      descripcion={descripcion}
-      precio={precio}
-      imgCard={imgCard}
-      linkCard={linkCard}
-    />
-  ));
-};
+ const ItemList = ({ items }) => {
+   return items.map((item) => (
+     <Item key={item.id} {...item}/>
+   ));
+ };
+
+// const ItemList = ({items}) => {
+//   return(
+//     <div>
+//       {items.map((item)=>{
+//         return <Item key={item.id} {...item}/>
+//       })}
+//     </div>
+//   )
+// }
+
 export { ItemList };

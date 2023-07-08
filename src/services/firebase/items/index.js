@@ -1,11 +1,11 @@
-import { getFirestore, getDoc, doc, collection } from "firebase/firestore";
+import { getFirestore, getDocs, collection } from "firebase/firestore";
 
-const getItems = async () => {
+const getItemsFB = async () => {
   const db = getFirestore();
   const itemsRef = collection(db, "items");
-  const snapshot = await getDoc(itemsRef);
+  const snapshot = await getDocs(itemsRef);
 
-  return snapshot.docs.map((doc) => doc.data());
+  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 };
 
-export { getItems };
+export { getItemsFB };
