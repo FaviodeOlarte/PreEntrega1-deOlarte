@@ -1,24 +1,34 @@
 // import { logo } from "../../temp/data";
 
-const NavBar = ({logo}) => {
+import { useContext } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import {
+  ItemsCarritoContext,
+  countObjCarrito,
+} from "../../context/itemsCarrito";
+
+const NavBar = ({ logo }) => {
   const alturaBusqueda = {
     height: "27px",
   };
-  const objetosDelCarrito = "+" + 1;
+  const { listCarrito } = useContext(ItemsCarritoContext);
+  const unitCarrito = listCarrito.reduce(
+    (acumulador, objeto) => acumulador + objeto.unit,
+    0
+  );
+  const navigate = useNavigate();
 
   return (
-    <header class="container-fluid p-0">
-      <nav class="row navbar navbar-expand-md bg-warning bg-gradient m-0 w-100 navSuperior">
+    <header className="container-fluid p-0">
+      <nav className="row navbar navbar-expand-md bg-warning bg-gradient m-0 w-100 navSuperior">
         <div className="container-fluid p-0">
           <div className="col-2 col-sm-2 ps-lg-2 logo">
-            <a
-              className=" m-1"
-              id="logo"
-              title="Kangoo - Home"
-              href="../../"
-            >
+            {/* <a className=" m-1" id="logo" title="Kangoo - Home" href="../../">
+              <img src={logo} alt="Kangoo" /> */}
+            <NavLink to={`/`} id="logo">
               <img src={logo} alt="Kangoo" />
-            </a>
+            </NavLink>
+            {/* </a> */}
           </div>
 
           {/* <!-- LOGO --> */}
@@ -98,26 +108,25 @@ const NavBar = ({logo}) => {
                 </a>
               </li>
 
-              <li className="nav-item me-1">
-                <a
-                  id="carrito"
-                  className="nav-link position-relative"
-                  aria-current="page"
+              <li
+                id="carrito"
+                className="nav-item me-1 nav-link position-relative"
+                onClick={() => navigate(`/carrito`)}
+              >
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  +{unitCarrito}
+                  <span className="visually-hidden">unread messages</span>
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="30px"
+                  fill="currentColor"
+                  className="bi bi-cart4"
+                  viewBox="0 0 16 16"
                 >
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {objetosDelCarrito}
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="30px"
-                    fill="currentColor"
-                    className="bi bi-cart4"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                  </svg>
-                </a>
+                  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                </svg>
+                {/* </a> */}
               </li>
 
               <li className="nav-item mx-1 mx-lg-3 mx-xxl-5">
@@ -144,4 +153,4 @@ const NavBar = ({logo}) => {
   );
 };
 
-export  {NavBar};
+export { NavBar };

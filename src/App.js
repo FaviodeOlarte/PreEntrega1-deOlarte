@@ -2,6 +2,7 @@ import "./App.css";
 import { NavBar } from "./components";
 import { ItemListContainer } from "./pages";
 import { ItemDetailContainer } from "./pages";
+import { Carrito } from "./pages";
 import logo from "././components/Multimedia/logo/Logo 1.png";
 // import imgProducto from "../src/components/Multimedia/Producto/Campera rosada2ff.jpg";
 // import NavBar from "./components/Navbar";
@@ -12,6 +13,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { ItemsCarritoProvider } from "./context/itemsCarrito";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -35,14 +37,17 @@ initializeApp(firebaseConfig);
 function App() {
   return (
     <div className="">
-      <NavBar logo={logo} />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:catId" element={<ItemListContainer />} />
-          <Route path="/item-detalle/:id" element={<ItemDetailContainer />} />
-          {/* <Route path="/" element={<Home />} /> */}
-        </Routes>
+        <ItemsCarritoProvider>
+          <NavBar logo={logo} />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:catId" element={<ItemListContainer />} />
+            <Route path="/item-detalle/:id" element={<ItemDetailContainer />} />
+            <Route path="/carrito" element={<Carrito />} />
+            {/* <Route path="/" element={<Home />} /> */}
+          </Routes>
+        </ItemsCarritoProvider>
       </BrowserRouter>
 
       {/* <NavBar urlLogo={logo} /> */}

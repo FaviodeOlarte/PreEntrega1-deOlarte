@@ -70,13 +70,14 @@
   font-size: 30px !important;
   font-family: "Concert One", cursive !important;
 }
-#navbarSupportedContent ul li a:hover {
+#navbarSupportedContent ul li:hover {
   color: white;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.723) 0%, rgba(0, 241, 255, 0) 4%);
   padding-bottom: 1px solid gray;
   scale: 1.1;
 }
+
 
 .barraBusqueda{
   width: 90%;
